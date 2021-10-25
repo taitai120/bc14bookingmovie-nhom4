@@ -1,0 +1,194 @@
+.btn {
+  padding: 12px 20px;
+  outline: unset;
+  border: unset;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn:hover {
+  background-color: #ccc;
+  color: var(--primary-color);
+}
+
+/* NAV */
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 100;
+  background-color: #000;
+  transition: all 0.5s;
+}
+
+.nav-content {
+  max-width: 1920px;
+  height: 100%;
+  padding: 0 40px;
+  margin: auto;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.nav a {
+  color: var(--white-color);
+}
+
+.nav a:hover {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 0;
+}
+
+.nav-item a {
+  padding: 20px 30px;
+  position: relative;
+}
+
+.nav-item a::before {
+  content: "";
+  position: absolute;
+  top: 45px;
+  left: 30px;
+  height: 3px;
+  width: 0px;
+  background-color: #c0392b;
+  transition: all 0.5s;
+}
+
+.nav-item a:hover::before {
+  width: 20px;
+}
+
+.nav-menu a {
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+}
+
+/* MENU TOGGLE */
+.hamburger-menu {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 101;
+  position: relative;
+  display: none;
+}
+
+.hamburger {
+  position: relative;
+  top: 50%;
+  left: 0;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 30px;
+  height: 3px;
+  border-radius: 0.5rem;
+  background-color: var(--white-color);
+  transition: all 0.1s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -10px;
+}
+
+.hamburger::after {
+  bottom: -10px;
+}
+
+.hamburger-menu.active .hamburger {
+  background-color: transparent;
+}
+
+.hamburger-menu.active .hamburger::before {
+  transform-origin: top left;
+  transform: rotate(45deg);
+  left: 6px;
+}
+
+.hamburger-menu.active .hamburger::after {
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+  left: 6px;
+}
+
+.welcome-user {
+  margin-left: 10px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 850px) {
+  body {
+    font-size: 10px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-wrapper {
+    height: 80px;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    background-color: #000;
+    flex-direction: column;
+    width: 80%;
+    height: 100vh;
+    padding: 20px;
+    justify-content: normal;
+    transition: all 0.5s;
+    margin-bottom: 30px;
+  }
+
+  .nav-menu a {
+    padding: 10px 30px;
+  }
+
+  .nav-menu li ~ li {
+    margin-left: 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .welcome-user {
+    margin-top: 10px;
+  }
+}

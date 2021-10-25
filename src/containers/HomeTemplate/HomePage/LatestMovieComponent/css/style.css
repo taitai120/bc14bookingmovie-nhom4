@@ -1,0 +1,59 @@
+.latest-section {
+  padding-top: 40px;
+}
+
+.latest-item {
+  width: 100%;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.latest-content {
+  text-align: center;
+  border-radius: 10px;
+  background-color: #ddd;
+  overflow: hidden;
+}
+
+.latest-img {
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.latest-img img {
+  width: 100%;
+  height: 100%;
+  object-position: top;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+
+.latest-img img:hover {
+  transform: scale(1.2);
+}
+
+.latest-title {
+  color: #000;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.latest-info {
+  height: calc(560px - 350px);
+  margin: 20px;
+}
+
+.latest-desc {
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

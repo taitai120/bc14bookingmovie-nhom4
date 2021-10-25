@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #c0392b;
+  --body-bg: #181616;
+  --box-bg: #221f1f;
+  --white-color: #fff;
+
+  --nav-height: 60px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-bg) !important;
+  color: var(--white-color) !important;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  margin: 0 15px 30px 15px;
+  letter-spacing: 1px;
+  border: 3px solid var(--primary-color);
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 8px 16px !important;
+  outline: unset;
+  border: unset;
+  text-transform: uppercase;
+  font-weight: 700 !important;
+  background-color: var(--primary-color) !important;
+  color: var(--white-color) !important;
+}
+
+.btn:hover {
+  background-color: #ccc !important;
+  color: var(--primary-color) !important;
+}
+
+.shadow-nav {
+  -moz-box-shadow: 3px 3px 5px 6px #fff;
+  -webkit-box-shadow: 3px 3px 5px 6px #fff;
+  box-shadow: 3px 3px 5px 6px #fff;
+}
+
+.main-color {
+  color: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}

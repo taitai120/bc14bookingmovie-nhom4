@@ -1,0 +1,55 @@
+/* PRICING SECTION */
+.pricing-section {
+  padding-top: 80px;
+}
+
+.pricing-item {
+  background-color: var(--box-bg);
+  padding: 50px;
+  margin: 15px 25px;
+  transition: all ease-in-out 1s;
+}
+
+.pricing-item:hover {
+  animation: moveOnTop 0.5s forwards;
+}
+
+@keyframes moveOnTop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.pricing-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+.pricing-price {
+  font-weight: 700;
+}
+
+.pricing-option-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-option-item {
+  margin-top: 10px;
+}
+
+.pricing-option-item:nth-of-type(3),
+.pricing-option-item:nth-of-type(4) {
+  text-decoration: 1px line-through;
+}
+
+.btn-register {
+  text-align: center;
+  margin-top: 30px;
+}

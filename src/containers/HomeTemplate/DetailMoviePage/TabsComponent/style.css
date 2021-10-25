@@ -1,0 +1,71 @@
+.css-1n3h4wo {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.css-ptiqhd-MuiSvgIcon-root,
+.css-19kzrtu {
+  color: #000;
+}
+
+.css-19kzrtu {
+  padding: 0 !important;
+}
+
+.css-1n3h4wo {
+  min-height: 240px;
+  height: none !important;
+}
+
+.css-cjctlb-MuiButtonBase-root-MuiTab-root {
+  color: #000 !important;
+  font-weight: 600 !important;
+  width: 100%;
+}
+
+.custom-tab-panel {
+  width: 100%;
+}
+
+.MuiBox-root {
+  height: 100%;
+}
+
+.box-img {
+  height: 60px;
+  width: 60px;
+  margin: 6px auto;
+}
+
+.box-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tab-main {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+
+.tab-content {
+  padding: 24px;
+}
+
+@media (max-width: 768px) {
+  .css-1n3h4wo {
+    height: auto !important;
+  }
+
+  .tab-main {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    padding-left: 38px !important;
+    padding-right: 38px !important;
+  }
+}

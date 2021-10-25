@@ -1,0 +1,124 @@
+.checkout {
+  margin-top: 140px;
+}
+
+.checkout-left {
+  padding: 0 40px 0 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-type-chair {
+  display: flex;
+  align-items: center;
+}
+
+button .bx {
+  font-size: 20px;
+}
+
+.chair {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 15px;
+  background-color: gray;
+  color: #000;
+}
+
+.chair-selected {
+  background-color: var(--primary-color);
+  cursor: no-drop;
+}
+
+.chair-vip {
+  background-color: #ffff33;
+}
+
+.chair-select {
+  background-color: rgb(109, 238, 109);
+  border: 3px solid rgb(109, 238, 109);
+}
+
+/* Ghế của mình đặt */
+.my-chair {
+  background-color: #ddd;
+  color: red;
+  -webkit-box-shadow: -1px 2px 18px -6px red;
+  box-shadow: -1px 2px 18px -6px red;
+}
+
+.checkout-right {
+  color: #000;
+  margin-top: 60px;
+}
+
+.content-ticket {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.content-ticket div {
+  font-size: 20px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2px;
+}
+
+.content-ticket-info {
+  height: 310px;
+  border: 2px solid #ccc;
+  margin-top: 12px;
+  overflow-y: scroll;
+}
+
+.list-chair-select {
+  padding: 0 12px;
+}
+
+.list-chair-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+
+.total-price {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .list-ticket {
+    margin: 0;
+  }
+
+  .checkout-left {
+    padding: 0;
+  }
+
+  .checkout-left div {
+    text-align: center;
+  }
+
+  .checkout-right {
+    padding-right: 20px;
+  }
+
+  .list-type-chair {
+    flex-direction: column;
+  }
+
+  .user-info {
+    flex-direction: column;
+  }
+}
