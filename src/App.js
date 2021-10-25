@@ -16,9 +16,9 @@ function App(props) {
   return (
     <Suspense fallback={<Loader></Loader>}>
       <Switch>
-        {renderRoutesHome()}
+        {renderRoutesHome(props)}
 
-        {renderRoutesAdmin()}
+        {renderRoutesAdmin(props.history)}
         <Route
           path="/authpage"
           component={lazy(() => import("./containers/AdminTemplate/AuthPage"))}

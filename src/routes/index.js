@@ -103,10 +103,11 @@ function renderRoutesHome() {
   });
 }
 
-function renderRoutesAdmin() {
+function renderRoutesAdmin(history) {
   return routesAdmin.map((route, index) => {
     return (
       <AdminTemplate
+        history={history}
         key={index}
         exact={route.exact}
         path={route.path}

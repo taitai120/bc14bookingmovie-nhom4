@@ -1,7 +1,7 @@
 import React from "react";
 import { Line } from "@ant-design/charts";
 
-const DashboardPage: React.FC = () => {
+const DashboardPage: React.FC = (props) => {
   const data = [
     { year: "1991", value: 3 },
     { year: "1992", value: 4 },

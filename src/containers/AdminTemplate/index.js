@@ -9,14 +9,12 @@ import {
   TeamOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { actLogout } from "./AuthPage/modules/actions";
-import { useDispatch } from "react-redux";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
 const AdminTemplate = (props) => {
-  const { Component, ...restProps } = props;
+  const { Component, history, ...restProps } = props;
 
   const [collapsed, setCollapsed] = useState(false);
 
@@ -38,14 +36,22 @@ const AdminTemplate = (props) => {
   const logOutAdmin = () => {
     localStorage.removeItem("UserCustomer");
     alert("Đã đăng xuất!");
-    <Redirect to="/login" />;
+    history.push("/login");
   };
 
   const operations = (
     <Fragment>
-      <button className="btn btn-danger" onClick={() => logOutAdmin()}>
-        Logout
-      </button>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <span className="text-2xl mr-3">{checkUser.hoTen}</span>
+        <button className="btn btn-danger" onClick={() => logOutAdmin()}>
+          Logout
+        </button>
+      </div>
     </Fragment>
   );
 
