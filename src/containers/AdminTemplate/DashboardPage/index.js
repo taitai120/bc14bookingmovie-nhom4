@@ -1,38 +1,73 @@
 import React from "react";
-import { Line } from "@ant-design/charts";
+import { Column } from "@ant-design/charts";
 
-const DashboardPage: React.FC = (props) => {
+const DashboardPage: React.FC = () => {
   const data = [
-    { year: "1991", value: 3 },
-    { year: "1992", value: 4 },
-    { year: "1993", value: 3.5 },
-    { year: "1994", value: 5 },
-    { year: "1995", value: 4.9 },
-    { year: "1996", value: 6 },
-    { year: "1997", value: 7 },
-    { year: "1998", value: 9 },
-    { year: "1999", value: 13 },
+    {
+      type: "Furniture appliances",
+      sales: 38,
+    },
+    {
+      type: "Cereals, Oils and Non-staple food",
+      sales: 52,
+    },
+    {
+      type: "Fresh fruits",
+      sales: 0,
+    },
+    {
+      type: "Beauty care",
+      sales: 145,
+    },
+    {
+      type: "Baby products",
+      sales: 48,
+    },
+    {
+      type: "Imported food",
+      sales: 38,
+    },
+    {
+      type: "Food and drink",
+      sales: 38,
+    },
+    {
+      type: "Home cleaning",
+      sales: 38,
+    },
   ];
 
   const config = {
     data,
-    height: 400,
-    xField: "year",
-    yField: "value",
-    point: {
-      size: 5,
-      shape: "diamond",
-    },
+    xField: "type",
+    yField: "sales",
     label: {
+      position: "middle",
       style: {
-        fill: "#aaa",
+        fill: "#FFFFFF",
+        opacity: 0.6,
       },
     },
+    meta: {
+      type: { alias: "Category" },
+      sales: { alias: "Sales" },
+    },
   };
+
   return (
     <div className="container">
-      <h1 className="text-4xl mb-16">Thống kê phim</h1>
-      <Line {...config} />
+      <h1>Thống kê phim</h1>
+      <Column
+        {...config}
+        onReady={(plot) => {
+          plot.on("plot:click", (evt) => {
+            const { x, y } = evt;
+            const { xField } = plot.options;
+            const tooltipData = plot.chart.getTooltipItems({ x, y });
+            console.log(tooltipData);
+          });
+        }}
+      />
     </div>
   );
 };

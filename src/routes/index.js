@@ -90,10 +90,11 @@ const routesAdmin = [
   },
 ];
 
-function renderRoutesHome() {
+function renderRoutesHome(history) {
   return routesHome.map((route, index) => {
     return (
       <HomeTemplate
+        history={history}
         key={index}
         exact={route.exact}
         path={route.path}

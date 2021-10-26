@@ -16,7 +16,7 @@ function App(props) {
   return (
     <Suspense fallback={<Loader></Loader>}>
       <Switch>
-        {renderRoutesHome(props)}
+        {renderRoutesHome(props.history)}
 
         {renderRoutesAdmin(props.history)}
         <Route

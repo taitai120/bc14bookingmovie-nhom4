@@ -10,6 +10,16 @@ export default function LoginPage(props) {
     matKhau: "",
   });
 
+  const { history } = props;
+  const checkUser = JSON.parse(localStorage.getItem("UserCustomer"));
+  if (checkUser && checkUser.maLoaiNguoiDung === "KhachHang") {
+    history.push("/");
+  }
+
+  if (checkUser && checkUser.maLoaiNguoiDung === "QuanTri") {
+    history.push("/dashboard");
+  }
+
   const dispatch = useDispatch();
   const error = useSelector((state) => state.loginReducer.error);
 

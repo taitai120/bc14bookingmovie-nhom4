@@ -1,0 +1,26 @@
+.logout-container {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logout-username {
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: tomato;
+}
+
+.logout-button {
+  background: tomato;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  width: 100px;
+  height: 100%;
+  line-height: 50%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}

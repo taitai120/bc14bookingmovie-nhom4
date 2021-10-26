@@ -9,6 +9,7 @@ import {
   TeamOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+import "./index.css";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -29,8 +30,7 @@ const AdminTemplate = (props) => {
   let checkUser = JSON.parse(localStorage.getItem("UserCustomer"));
 
   if (checkUser?.maLoaiNguoiDung != "QuanTri") {
-    alert("You have no permission to access here");
-    return <Redirect to="/login" />;
+    return <Redirect to="/" />;
   }
 
   const logOutAdmin = () => {
@@ -41,14 +41,9 @@ const AdminTemplate = (props) => {
 
   const operations = (
     <Fragment>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <span className="text-2xl mr-3">{checkUser.hoTen}</span>
-        <button className="btn btn-danger" onClick={() => logOutAdmin()}>
+      <div className="logout-container">
+        <span className="logout-username">{checkUser.hoTen}</span>
+        <button className="logout-button" onClick={() => logOutAdmin()}>
           Logout
         </button>
       </div>
@@ -64,7 +59,7 @@ const AdminTemplate = (props) => {
             <Layout style={{ minHeight: "100vh" }}>
               <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
                 <div className="logo">
-                  <NavLink to="/dashboard">
+                  <NavLink to="/">
                     <img src="https://cybersoft.edu.vn/wp-content/uploads/2017/03/MIN-OP1.png" />
                   </NavLink>
                 </div>
